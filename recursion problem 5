@@ -1,0 +1,30 @@
+LINK:  https://practice.geeksforgeeks.org/problems/find-all-factorial-numbers-less-than-or-equal-to-n3548/0?problemType=functional&difficulty[]=-1&page=1&query=problemTypefunctionaldifficulty[]-1page1&utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=find-all-factorial-numbers-less-than-or-equal-to-n
+
+class Solution
+{
+public:
+
+    long long fact(long long n){
+        if(n==0) return 1;
+        return(n*fact (n-1));
+    }
+    vector<long long> factorialNumbers(long long N)
+    {
+        // Write Your Code here
+        // here we should find fact! and compare them to N 
+        // fact! of 1 2 3 4 5 is 1 2 6 24 120 and then print only which is lower or equal to N
+        vector < long long > ans;
+        long long i=1;
+        while(1){
+            long long x =fact(i);
+            if(x<=N){
+                ans.push_back(x);
+                i++;
+                
+            }
+            else break;
+        }
+        return ans;
+
+    }
+};
